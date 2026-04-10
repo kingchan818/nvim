@@ -14,6 +14,20 @@ return {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-j>"] = require("telescope.actions").move_selection_next,
+            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+          },
+        },
+      },
+    },
+  },
+
+  {
     "lewis6991/gitsigns.nvim",
     opts = {
       current_line_blame = true,
@@ -21,6 +35,14 @@ return {
         delay = 500,
         virt_text_pos = "eol",
       },
+    },
+  },
+
+  {
+    "3rd/image.nvim",
+    ft = { "svg", "png", "jpg", "jpeg", "gif", "webp" },
+    opts = {
+      processor = "magick_cli",
     },
   },
 

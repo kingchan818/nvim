@@ -14,6 +14,12 @@ map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "Terminal window right" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+-- Find file (like Cmd+P in VS Code)
+map("n", "<leader>p", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+
+-- Open current file in macOS default app (Preview for PDF/images)
+map("n", "<leader>op", "<cmd>!open %<cr>", { desc = "Open file in system viewer" })
+
 -- Git blame
 map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Git toggle line blame" })
 map("n", "<leader>gd", "<cmd>Gitsigns diffthis<cr>", { desc = "Git diff this file" })
