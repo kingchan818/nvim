@@ -13,3 +13,7 @@ map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "Terminal window up" })
 map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "Terminal window right" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+-- Git blame
+map("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Git toggle line blame" })
+map("n", "<leader>gd", "<cmd>Gitsigns diffthis<cr>", { desc = "Git diff this file" })
